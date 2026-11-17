@@ -53,4 +53,19 @@ class NameFormatterTest {
         assertEquals(expectedString, actualString);
 
     }
+
+    @Test
+    void formatWithIncompleteFullName() {
+        // arrange
+        String  fullName = "Mel B Johnson, PhD";
+
+        String expectedString = "Johnson, Mel B, PhD";
+
+        // act
+        String actualString = NameFormatter.format(fullName);
+
+        // assert
+        assertEquals(expectedString, actualString);
+
+    }
 }
